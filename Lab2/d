@@ -1,0 +1,67 @@
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("ile numerow");
+        int ile = scanner.nextInt();
+        System.out.println("A jakie numery obstawiasz musiz 6?");
+        ArrayList<Integer> zaklad=new ArrayList<>();
+
+        while(zaklad.size()<ile){
+            int zm=scanner.nextInt();
+            if(!zaklad.contains(zm)&&zm>0&&zm<51)
+            {
+                zaklad.add(zm);
+            }else{
+                System.out.println("Zly numer spróbuj jeszcze raz");
+            }
+
+        }
+
+        int min = 1;
+        int max = 50;
+
+        ArrayList<Integer> draw = new ArrayList<>();
+
+        while (draw.size() < ile) {
+            int num = GetNum(min, max);
+            if (!draw.contains(num)) {
+                draw.add(num);
+            }
+        }
+        ArrayList<Integer> draw2 = new ArrayList<>();
+        int licznik=1;
+
+        while(!(zaklad.equals(draw2))){
+            draw2= Losoj(min,max,ile);
+            if(((zaklad.equals(draw2))))
+            {
+                System.out.println("wygrana za"+licznik+"razem!");
+                break;
+            }
+
+            licznik++;
+        }
+
+        scanner.close();
+    }
+
+    public static int GetNum(int min, int max) {
+        return (int) (Math.random() * (max - min + 1) + min);
+    }
+
+    public static ArrayList Losoj(int min,int max,int ile){
+        ArrayList<Integer> draw = new ArrayList<>();
+
+        while (draw.size() < ile) {
+            int num = GetNum(min, max);
+            if (!draw.contains(num)) {
+                draw.add(num);
+            }
+        }
+        return draw;
+    }
+}
