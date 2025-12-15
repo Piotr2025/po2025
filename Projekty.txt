@@ -68,7 +68,7 @@ Mateusz Maślanka, Piotr Kolenda
     Natalia Mordarska,Grzegorz Łątka 
 
 27) Gra Planszowa (np. Monopoly uproszczone): Plansza, pionki, rzuty kostką, kupowanie pól i obsługa bankructwa.  
-
+Piotr Sobczyk
 28) System Turniejowy: Generowanie drabinki rozgrywek, wprowadzanie wyników meczów i wyłanianie zwycięzcy.
 
 29) Wirtualny Tamagotchi: Opieka nad stworkiem (karmienie, zabawa, leczenie), który zmienia stan w czasie rzeczywistym.
